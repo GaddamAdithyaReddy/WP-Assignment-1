@@ -1,0 +1,133 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: yellow;
+}
+
+/* Sections */
+.section {
+    padding: 40px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Banner */
+.banner {
+    height: 300px;
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-card:nth-child(1) {
+    background-image: url("Web\ dev.webp");
+}
+
+.course-card:nth-child(2) {
+    background-image: url("py.webp");
+}
+
+.course-card:nth-child(3) {
+    background-image: url("data.jpg");
+}
+
+/* Forms */
+form {
+    display: grid;
+    gap: 10px;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.home-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#home h1 {
+    margin-bottom: 0;
+}

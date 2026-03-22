@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Learning Platform</title>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <h2 class="logo">LearnHub</h2>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#details">Course Details</a>
+        <a href="#register">Register/Login</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section">
+    <h1>Welcome to LearnHub</h1>
+    <div class="banner"></div>
+
+    <img src="learnhub.gif" alt="Learning" class="home-image">
+
+    <p>
+        We provide high-quality online courses in programming, web development,
+        and technology to help you build your career.
+    </p>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="section">
+    <h2>Our Courses</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>Instructor: John Smith</p>
+            <p>Price: ₹2000</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Python Programming</h3>
+            <p>Instructor: Sarah Lee</p>
+            <p>Price: ₹2500</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Data Science</h3>
+            <p>Instructor: David Kumar</p>
+            <p>Price: ₹3000</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- COURSE DETAILS -->
+<section id="details" class="section">
+    <h2>Course Details</h2>
+
+    <p><strong>Description:</strong> Learn full web development including HTML, CSS, JavaScript.</p>
+    <p><strong>Instructor:</strong> John Smith, Senior Software Developer.</p>
+    <p><strong>Curriculum:</strong> HTML, CSS, JavaScript, Projects.</p>
+    <p><strong>Duration:</strong> 3 Months</p>
+
+    <button>Enroll Now</button>
+</section>
+
+<!-- REGISTER / LOGIN -->
+<section id="register" class="section">
+
+    <h2>Register</h2>
+
+    <form onsubmit="return validateRegister()">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirm" placeholder="Confirm Password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Login</h2>
+
+    <form onsubmit="return validateLogin()">
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+
+    <h2>Contact Us</h2>
+
+    <p><strong>Address:</strong> Hyderabad, India</p>
+    <p><strong>Email:</strong> info@learnhub.com</p>
+    <p><strong>Phone:</strong> +91 9876543210</p>
+
+    <h3>Send Inquiry</h3>
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+</section>
+
+<!-- JavaScript Validation -->
+<script>
+
+function validateRegister() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    if(name === "" || email === "" || password === "" || confirm === "") {
+        alert("All fields are required");
+        return false;
+    }
+
+    if(password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return false;
+    }
+
+    if(password !== confirm) {
+        alert("Passwords do not match");
+        return false;
+    }
+
+    alert("Registration Successful");
+    return true;
+}
+
+function validateLogin() {
+
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
+
+    if(email === "" || password === "") {
+        alert("Please enter email and password");
+        return false;
+    }
+
+    alert("Login Successful");
+    return true;
+}
+
+</script>
+
+</body>
+</html>

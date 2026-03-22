@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<courses
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="courses.xsd">
+    <course>
+        <title>Web Development</title>
+        <instructor>John Smith</instructor>
+        <price>2000</price>
+        <rating>4</rating>
+        <duration>3 Months</duration>
+    </course>
+
+    <course>
+        <title>Python Programming</title>
+        <instructor>Sarah Lee</instructor>
+        <price>2500</price>
+        <rating>5</rating>
+        <duration>2 Months</duration>
+    </course>
+
+    <course>
+        <title>Data Science</title>
+        <instructor>David Kumar</instructor>
+        <price>3000</price>
+        <rating>4</rating>
+        <duration>4 Months</duration>
+    </course>
+
+</courses>
